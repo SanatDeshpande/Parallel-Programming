@@ -147,7 +147,7 @@ void parallelDataFirst ( int data_len, unsigned int* input_array, unsigned int* 
     gettimeofday ( &ta, NULL );
 
     /* for all elements in the data */
-    #pragma omp parallel for
+    #pragma omp parallel for schedule(dynamic)
     for (int x=0; x<data_len; x++) {
       /* for all elements in the filter */
       for (int y=0; y<filter_len; y++) {
@@ -219,10 +219,6 @@ int main( int argc, char** argv )
   /* Execute at a variety of filter lengths */
   for ( int filter_len = 512; filter_len<=FILTER_LEN; filter_len*=2)
   {
-    parallelFilterFirst ( DATA_LEN, input_array, output_array, filter_len, filter_list );
-    checkData ( serial_array, output_array );
-    memset ( output_array, 0, DATA_LEN );
-
     parallelDataFirst ( DATA_LEN, input_array, output_array, filter_len, filter_list );
     checkData ( serial_array, output_array );
     memset ( output_array, 0, DATA_LEN );
