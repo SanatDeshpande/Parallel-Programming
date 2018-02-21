@@ -1,0 +1,125 @@
+gcc -o filter_parallel -O0 -fopenmp filter_parallel.c
+gcc -o filter_parallel_dynamic -O0 -fopenmp filter_parallel_dynamic.c
+gcc -o filter_parallel_unrolling -O0 -fopenmp filter_parallel_unrolling.c
+******parallel testing no speedup*****
+Parallel filter first took 17 seconds and 897455 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 17 seconds and 102987 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 17 seconds and 892119 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 17 seconds and 102392 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 17 seconds and 931060 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 17 seconds and 103212 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 17 seconds and 940068 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 17 seconds and 103040 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 17 seconds and 878184 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 17 seconds and 104435 microseconds.  Filter length = 512
+Data check failed offset 1
+******parallel testing with speedup*****
+Parallel filter first took 74 seconds and 20869 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 73 seconds and 807329 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 73 seconds and 542889 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 73 seconds and 822271 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 73 seconds and 927383 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 73 seconds and 615596 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 73 seconds and 885304 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 73 seconds and 822299 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 73 seconds and 841255 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 73 seconds and 990998 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 36 seconds and 990030 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 36 seconds and 922925 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 37 seconds and 19896 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 36 seconds and 920272 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 37 seconds and 76774 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 36 seconds and 920810 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 37 seconds and 8916 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 36 seconds and 922109 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 37 seconds and 27246 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 41 seconds and 36014 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 20 seconds and 214273 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 18 seconds and 459746 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 18 seconds and 487668 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 18 seconds and 458902 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 18 seconds and 474784 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 18 seconds and 460476 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 31 seconds and 59687 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 18 seconds and 458557 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 19 seconds and 493881 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 18 seconds and 460225 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 17 seconds and 971342 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 17 seconds and 104806 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 17 seconds and 866336 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 17 seconds and 103793 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 17 seconds and 934665 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 17 seconds and 104074 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 19 seconds and 327950 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 18 seconds and 817159 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 17 seconds and 620297 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 17 seconds and 103988 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 17 seconds and 647221 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 17 seconds and 141586 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 17 seconds and 972957 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 17 seconds and 436506 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 17 seconds and 808256 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 17 seconds and 149907 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 17 seconds and 553728 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 17 seconds and 16145 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel filter first took 17 seconds and 706049 microseconds.  Filter length = 512
+Data check failed offset 1
+Parallel data first took 17 seconds and 410583 microseconds.  Filter length = 512
+Data check failed offset 1
