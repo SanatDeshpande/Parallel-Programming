@@ -2,6 +2,8 @@ import os
 
 count = [1,2,4,8,16]
 
+os.system("make")
+
 print("*****serial testing******")
 os.system("./runloop ./filter_serial")
 
