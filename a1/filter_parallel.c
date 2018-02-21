@@ -18,7 +18,7 @@
 
 /* Example filter sizes */
 #define DATA_LEN  512*512*256
-#define FILTER_LEN  512
+#define FILTER_LEN  16
 
 
 /* Subtract the `struct timeval' values X and Y,
@@ -184,7 +184,9 @@ void checkData ( unsigned int * serialarray, unsigned int * parallelarray )
 int main( int argc, char** argv )
 {
   //added to make running tests with different thread counts easier
-  omp_set_num_threads(atoi(argv[1]));
+  if (argc == 2) {
+      omp_set_num_threads(atoi(argv[1]));
+  }
 
   /* loop variables */
   int x,y;
@@ -217,7 +219,7 @@ int main( int argc, char** argv )
   }
 
   /* Execute at a variety of filter lengths */
-  for ( int filter_len = 512; filter_len<=FILTER_LEN; filter_len*=2)
+  for ( int filter_len = 16; filter_len<=FILTER_LEN; filter_len*=2)
   {
     parallelFilterFirst ( DATA_LEN, input_array, output_array, filter_len, filter_list );
     checkData ( serial_array, output_array );
