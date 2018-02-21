@@ -17,7 +17,7 @@
 #include <assert.h>
 
 /* Example filter sizes */
-#define DATA_LEN  512*512*256*2
+#define DATA_LEN  512*512*256
 #define FILTER_LEN  1024
 
 
