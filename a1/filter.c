@@ -251,6 +251,11 @@ void checkData ( unsigned int * serialarray, unsigned int * parallelarray )
 
 int main( int argc, char** argv )
 {
+  //added to make running tests with different thread counts easier
+  if (argc == 2) {
+      omp_set_num_threads(atoi(argv[1]));
+  }
+
   /* loop variables */
   int x,y;
 
