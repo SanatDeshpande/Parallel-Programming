@@ -296,7 +296,7 @@ int main( int argc, char** argv )
     checkData ( serial_array, output_array );
     memset ( output_array, 0, DATA_LEN );
 
-    parallelFilterFirstDynamic ( DATA_LEN, input_array, output_array, filter_len, filter_list );
+    parallelDataFirstDynamic ( DATA_LEN, input_array, output_array, filter_len, filter_list );
     checkData ( serial_array, output_array );
     memset ( output_array, 0, DATA_LEN );
 
