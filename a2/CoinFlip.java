@@ -10,6 +10,8 @@ public class CoinFlip implements Runnable {
             CoinFlip[] coins = new CoinFlip[threads];
             Thread[] coinThreads = new Thread[threads];
 
+            long start = System.currentTimeMillis();
+
             for (int i = 0; i < threads; i++) {
                 coins[i] = new CoinFlip(threads, iterations);
                 coinThreads[i] = new Thread(coins[i]);
@@ -29,7 +31,9 @@ public class CoinFlip implements Runnable {
                     return;
                 }
             }
+            long end = System.currentTimeMillis();
             System.out.println(totalHeads + " heads in " + iterations + " coin tosses");
+            System.out.println("Elapsed Time: " + (end-start) + "ms");
         }
     }
 
