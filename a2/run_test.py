@@ -1,6 +1,6 @@
 import os
 
-iterations = [1e6, 1e7, 1e8, 1e9]
+iterations = [1e8, 1e9, 1e10]
 threads = [1, 2, 4, 8, 16]
 
 for i in iterations:
