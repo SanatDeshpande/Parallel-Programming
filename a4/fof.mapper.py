@@ -7,19 +7,23 @@ friend_map = {}
 friend_list = [i for i in sys.stdin.read().split("\n") if len(i) > 0]
 
 #build map
-for f in friend_list:
-    f_key = f.split(" ")[0] #gets key
-    friends = [i for i in f.split(" ")[1:]] #gets value list (friends)
-    if f_key in friend_map:
-        friend_map[f_key].append(friends)
-    else:
-        friend_map[f_key] = [friends]
+for i in friend_list:
+    main = int(i.split(" ")[0])
+    for j in i.split(" ")[1:]:
+        key = [main, int(j)]
+        key.sort(reverse=False)
+        if (key[0], key[1]) in friend_map:
+            friend_map[(key[0], key[1])].append([int(k) for k in i.split(" ")[1:]])
+        else:
+            friend_map[(key[0], key[1])] = [[int(k) for k in i.split(" ")[1:]]]
+        key.sort(reverse=True)
+        if (key[0], key[1]) in friend_map:
+            friend_map[(key[0], key[1])].append([int(k) for k in i.split(" ")[1:]])
+        else:
+            friend_map[(key[0], key[1])] = [[int(k) for k in i.split(" ")[1:]]]
 
-#outputs mapping
-for i in friend_map:
-    sys.stdout.write(i + "|")
-    for j in friend_map[i]:
-        for k in j:
-            sys.stdout.write(k + " ")
-        sys.stdout.write(", ")
+for f in friend_map:
+    sys.stdout.write(str(f[0]) + " " + str(f[1]) + " ")
+    for i in friend_map[f]:
+        sys.stdout.write(" ".join([str(j) for j in i]) + ",")
     sys.stdout.write("\n")
