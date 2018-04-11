@@ -9,6 +9,7 @@ friend_list = [i for i in sys.stdin.read().split("\n") if len(i) > 0]
 #build map
 for i in friend_list:
     main = int(i.split(" ")[0])
+    i = i.strip()
     for j in i.split(" ")[1:]:
         key = [main, int(j)]
         key.sort(reverse=False)
