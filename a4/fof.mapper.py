@@ -1,12 +1,14 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python
 
 import sys
 
-data = sys.stdin.read().strip().split(" ")
-head = data[0]
+all_lines = sys.stdin.read().split("\n")
 
-for i in data:
-    for j in data:
-        for k in data:
-            if int(j) < int(k) and i != j and i != k:
-                sys.stdout.write(i + " " + j + " " + k + "\t1\n")
+for line in all_lines:
+    data = line.strip().split(" ")
+    head = data[0]
+
+    for i in range(1, len(data)):
+        for j in range(i+1, len(data)):
+            key = sorted([int(head), int(data[i]), int(data[j])])
+            print(str(key[0]) + " " + str(key[1]) + " " + str(key[2]) + "\t1")

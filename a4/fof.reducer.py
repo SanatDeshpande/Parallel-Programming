@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python
 
 import sys
 
@@ -12,35 +12,17 @@ for d in data[1:]:
         count += int(d.split("\t")[1])
     else:
         if count >= 3:
-            sys.stdout.write(prev_key + "\t\n")
-            count = 0
+            triad = sorted([int(i) for i in prev_key.split(" ")])
+            #order doesnt matter here
+            #once you find one triangle, you can enumerate them all
+            print(str(triad[2]) + " " + str(triad[0]) + " " + str(triad[1]))
+            print(str(triad[0]) + " " + str(triad[1]) + " " + str(triad[2]))
+            print(str(triad[1]) + " " + str(triad[0]) + " " + str(triad[2]))
+            count = 1
         prev_key = k
 
-'''
-prev_key = "" #holds previous key
-cum_vals = [] #cumulative values, flushed between keys
-intersection = None
-
-for d in data:
-    if len(d) == 0:
-        continue
-    k = d.strip().split("\t")[0]
-    v = d.strip().split("\t")[1]
-
-    if k == prev_key:
-        cum_vals += [v.split(" ")]
-    else:
-        #writes out prev_key and values
-        #flushes out values and prev_key with new ones
-        if prev_key != "": #check for base condition
-            if len(cum_vals) != 1:
-                cum_set = [set(i) for i in cum_vals]
-                intersection = set.intersection(*cum_set)
-                sys.stdout.write(prev_key + "....." + " ".join(list(intersection)) + "\n")
-        prev_key = k #sets new previous key
-        cum_vals = [v.split(" ")]
-
-#prints out last key->value
-if intersection != None and len(cum_vals) != 1:
-    sys.stdout.write(prev_key + "....." + " ".join(list(intersection)) + "\n")
-'''
+if count >= 3:
+    triad = sorted([int(i) for i in prev_key.split(" ")])
+    print(str(triad[2]) + " " + str(triad[0]) + " " + str(triad[1]))
+    print(str(triad[0]) + " " + str(triad[1]) + " " + str(triad[2]))
+    print(str(triad[1]) + " " + str(triad[0]) + " " + str(triad[2]))
